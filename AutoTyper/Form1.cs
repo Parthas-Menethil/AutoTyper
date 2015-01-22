@@ -22,6 +22,8 @@ namespace AutoTyper
         {
             txtDemoBox.Text += Content.Substring(Pointer++, 1);
             txtDemoBox.Select(txtDemoBox.Text.Length, 0);
+			if (Pointer >= Content.Length)
+                timerTyper.Enabled = false;
         }
     }
 }
